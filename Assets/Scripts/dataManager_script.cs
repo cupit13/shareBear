@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class dataManager_script : MonoBehaviour
 {
-    public string username;
+    public static string username;
+    public static int score;
+
+    public static bool LoggedIn { get { return username != null; } }
     public Text fie_username;
-    
+
     void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("manager");
@@ -19,6 +22,7 @@ public class dataManager_script : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
     }
 
     public void loadScene(int scnInd)
@@ -30,4 +34,10 @@ public class dataManager_script : MonoBehaviour
     {
         username = fie_username.text;
     }
+
+    public static void Logout()
+    {
+        username = null;
+    }
+
 }
