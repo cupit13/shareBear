@@ -10,13 +10,16 @@ public class mainMenu : MonoBehaviour
     public Text prompt;
     public Text loginText;
     public Button playGame;
-    
+    public Button registerButton;
+
     private void Start()
     {
         resetUser();
-    }
+        registerButton.interactable = !dataManager_script.LoggedIn;
 
-    public void GoToRegister()
+}
+
+public void GoToRegister()
         {
         SceneManager.LoadScene(1);
         }

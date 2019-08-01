@@ -38,6 +38,7 @@ public class dataManager_script : MonoBehaviour
     public static void Logout()
     {
         username = null;
+        SceneManager.LoadScene(0);
     }
 
 }

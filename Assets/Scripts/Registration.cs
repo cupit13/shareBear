@@ -10,6 +10,8 @@ public class Registration : MonoBehaviour
 
     public Button submitButton;
 
+    public Text promptDisplay;
+
     public void callRegister()
     {
         StartCoroutine(Register());
@@ -34,6 +36,10 @@ public class Registration : MonoBehaviour
         else
         {
             Debug.Log("user created failed. Error #" + www.text);
+            if (www.text[0] == '3')
+            {
+                promptDisplay.text = "Username already taken!";
+            }
         }
     }
 
@@ -41,4 +47,10 @@ public class Registration : MonoBehaviour
     {
         submitButton.interactable = (nameField.text.Length >= 8 && passwordField.text.Length >= 8);
     }
+
+    public void logout()
+    {
+        dataManager_script.Logout();
+    }
+
 }

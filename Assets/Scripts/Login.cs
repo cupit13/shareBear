@@ -47,4 +47,9 @@ public class Login : MonoBehaviour
     {
         submitButton.interactable = (nameField.text.Length >= 8 && passwordField.text.Length >= 8);
     }
+
+    public void logout()
+    {
+        dataManager_script.Logout();
+    }
 }
