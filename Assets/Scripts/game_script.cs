@@ -34,7 +34,7 @@ public class game_script : MonoBehaviour
         form.AddField("name", dataManager_script.username);
         form.AddField("score", dataManager_script.score);
 
-        WWW www = new WWW("sqlconnect/savedata.php", form);
+        WWW www = new WWW("https://clients.ayzhosting.com/jjohar/savedata.php", form);
         yield return www;
         if(www.text == "0")
         {

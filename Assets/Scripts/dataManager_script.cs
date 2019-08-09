@@ -8,9 +8,11 @@ public class dataManager_script : MonoBehaviour
 {
     public static string username;
     public static int score;
+    public static string phpAddress;
 
     public static bool LoggedIn { get { return username != null; } }
     public Text fie_username;
+    public bool isMAMP;
 
     void Awake()
     {
@@ -22,6 +24,20 @@ public class dataManager_script : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+    }
+
+    private void Start()
+    {
+        if (isMAMP)
+        {
+            phpAddress = "http://localhost/sqlconnect/";
+        }
+        else
+        {
+            phpAddress = "http://ec2-54-189-168-200.us-west-2.compute.amazonaws.com/";
+        }
+        //http://10.10.12.205/sqlconnect/ ip address of laptop at ayz
 
     }
 

@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class WebTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    IEnumerator Start()
+    public void executeWebTest()
     {
-        WWW request = new WWW("sqlconnect/webTest.php");
-        yield return request;
-        string[] webResults = request.text.Split('\t');
-        foreach(string a in webResults)
-        {
-            Debug.Log(a);
+        StartCoroutine(webTestThis());
+    }
 
+    IEnumerator webTestThis()
+    {
+        WWWForm form = new WWWForm();
+
+        form.AddField("name", dataManager_script.username);
+
+        WWW www = new WWW("https://clients.ayzhosting.com/jjohar/webTest.php", form);
+        yield return www;
+
+        if (www.text[0] == '0')
+        {
+            Debug.Log("sucess" + www.text);
+        }
+        else
+        {
+            Debug.Log("fail" + www.text);
         }
     }
 

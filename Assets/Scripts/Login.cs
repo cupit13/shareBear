@@ -11,6 +11,7 @@ public class Login : MonoBehaviour
 
     public Button submitButton;
     public Text prompt;
+    public Text debugger;
 
     public void CallLogin()
     {
@@ -24,7 +25,7 @@ public class Login : MonoBehaviour
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
 
-        WWW www = new WWW("sqlconnect/login.php", form);
+        WWW www = new WWW("https://clients.ayzhosting.com/jjohar/login.php", form);
         yield return www;
 
         if(www.text[0] == '0')
@@ -36,6 +37,7 @@ public class Login : MonoBehaviour
         else
         {
             Debug.Log("User login failed. Error #" + www.text);
+            debugger.text = www.text;
             if (www.text[0] == '6')
             {
                 prompt.text = "Incorrect Password";
@@ -52,4 +54,9 @@ public class Login : MonoBehaviour
     {
         dataManager_script.Logout();
     }
+
+    public void buttonPressed()
+    {
+        debugger.text = "button is pressed";
+    } 
 }

@@ -12,6 +12,7 @@ public class Registration : MonoBehaviour
 
     public Text promptDisplay;
 
+
     public void callRegister()
     {
         StartCoroutine(Register());
@@ -24,7 +25,7 @@ public class Registration : MonoBehaviour
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
 
-        WWW www = new WWW("sqlconnect/register.php", form);
+        WWW www = new WWW("https://clients.ayzhosting.com/jjohar/register.php", form);
         yield return www;
 
         if (www.text == "0")

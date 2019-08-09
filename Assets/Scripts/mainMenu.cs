@@ -15,9 +15,8 @@ public class mainMenu : MonoBehaviour
     private void Start()
     {
         resetUser();
-        registerButton.interactable = !dataManager_script.LoggedIn;
-
-}
+    
+    }
 
 public void GoToRegister()
         {
@@ -39,6 +38,7 @@ public void GoToRegister()
             loginText.text = "Sign Out";
             VerifyUser();
         }
+        registerButton.interactable = !dataManager_script.LoggedIn;
     }
 
     public void GoToLogin()
