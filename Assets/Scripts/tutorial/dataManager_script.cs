@@ -35,7 +35,7 @@ public class dataManager_script : MonoBehaviour
         }
         else
         {
-            phpAddress = "http://ec2-54-189-168-200.us-west-2.compute.amazonaws.com/";
+            phpAddress = "https://clients.ayzhosting.com/jjohar/";
         }
         //http://10.10.12.205/sqlconnect/ ip address of laptop at ayz
 
