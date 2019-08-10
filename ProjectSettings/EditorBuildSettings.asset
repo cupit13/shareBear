@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/registerMenu.unity
     guid: 396b6bca1d742404c8c74a4c18f2b98c
   - enabled: 1
-    path: Assets/Scenes/tutorial/tutorialLoginMenu.unity
-    guid: f3ed97814ac370b488593419840487bb
+    path: Assets/Scenes/loginMenu.unity
+    guid: a76be8c7aa30ceb48be0a6dd57e07056
   - enabled: 1
-    path: Assets/Scenes/tutorial/tutorialGame.unity
-    guid: 7a85483f1cdf3cd48b44581b84011cb1
+    path: Assets/Scenes/dashboard.unity
+    guid: 70b484524e21ebb41a6006fb8edb65a3
   m_configObjects: {}

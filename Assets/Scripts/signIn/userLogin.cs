@@ -30,7 +30,6 @@ public class userLogin : MonoBehaviour
         if (www.text[0] == '0')
         {
             dataManager_script.username = nameField.text;
-            dataManager_script.score = int.Parse(www.text.Split('\t')[1]);
             SceneManager.LoadScene(0);
         }
         else

@@ -1147,6 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1591016921}
   - component: {fileID: 1591016922}
+  - component: {fileID: 1591016923}
   m_Layer: 0
   m_Name: dataManager
   m_TagString: manager
@@ -1182,6 +1183,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fie_username: {fileID: 0}
   isMAMP: 0
+--- !u!114 &1591016923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591016920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9890d3d1c5c18047bf8353b9c8f92fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uWare:
+    userwares:
+    - itemID: 0
+      title: 
+      owner: 0
+      isAvailable: 0
+      availableDate: 
+    - itemID: 0
+      title: 
+      owner: 0
+      isAvailable: 0
+      availableDate: 
 --- !u!1 &1703477132
 GameObject:
   m_ObjectHideFlags: 0
