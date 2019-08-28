@@ -13,6 +13,7 @@ public class dataManager_script : MonoBehaviour
     public static bool LoggedIn { get { return username != null; } }
     public Text fie_username;
     public bool isMAMP;
+    public static bool isAutoLogin = true;
 
     void Awake()
     {
@@ -57,4 +58,8 @@ public class dataManager_script : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void noAutoLogin()
+    {
+        dataManager_script.isAutoLogin = false;
+    }
 }

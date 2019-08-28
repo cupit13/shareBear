@@ -50,6 +50,7 @@ public class userMainMenu : MonoBehaviour
         }
         else
         {
+            dataManager_script.isAutoLogin = false;
             dataManager_script.username = null;
             resetUser();
         }

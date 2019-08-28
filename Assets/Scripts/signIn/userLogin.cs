@@ -51,5 +51,4 @@ public class userLogin : MonoBehaviour
     {
         dataManager_script.Logout();
     }
-
 }

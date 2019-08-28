@@ -28,5 +28,16 @@ public class WebTest : MonoBehaviour
         }
     }
 
+    public void saveToUserPrefs()
+    {
+        //PlayerPrefs.SetString("username", "bobo");
+        string name = PlayerPrefs.GetString("username");
+        print($"username is: {name}");
 
+    }
+
+    public void printAuto()
+    {
+        print(dataManager_script.isAutoLogin);
+    }
 }
