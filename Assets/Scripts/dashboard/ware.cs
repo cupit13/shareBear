@@ -12,4 +12,5 @@ public class Ware :System.Object
     public string availableDate;
     public string postDate;
     public string description;
+    public string username;
 }

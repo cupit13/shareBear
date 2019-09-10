@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class waresManager : MonoBehaviour
 {
-    public Wares userWares = new Wares();
-    public Wares browseWares = new Wares();
+    public List<Ware> userWares = new List<Ware>();
+    public List<Ware> browseWares = new List<Ware>();
     public Ware tempWare = new Ware();
 }
